@@ -29,7 +29,7 @@ function getVillage() {
       humans,
       kids,
     };
-    if (kids >= 15) {
+    if (kids <= 15) {
       kidsDied += kids;
       villageDied++;
       humansDied += humans;
@@ -102,7 +102,7 @@ let card = document.querySelectorAll(".card");
 
 let getStatusVillage = function () {
   for (let index = 0; index < card.length; index++) {
-    if (village[index].kids >= 15) {
+    if (village[index].kids <= 15) {
       card[index].classList.add("red");
     } else {
       card[index].classList.add("green");
